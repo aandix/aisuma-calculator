@@ -1,0 +1,30 @@
+{
+  "name": "aisuma-calculator",
+  "version": "1.0.0",
+  "description": "Aisuma Calculator with Electron.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["calculator", "electron", "desktop-app"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.aisuma.calculator",
+    "productName": "Aisuma Calculator",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisuma Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-left">
+            <span class="app-title">Aisuma Calculator</span>
+        </div>
+        <div class="title-bar-right">
+            <button class="title-bar-btn theme-btn" id="theme-btn">🌙</button>
+            <button class="title-bar-btn pin-btn" id="pin-btn">📌</button>
+            <button class="title-bar-btn minimize-btn">─</button>
+            <button class="title-bar-btn close-btn">✕</button>
+        </div>
+    </div>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn clear" onclick="clearAll()">AC</button>
+            <button class="btn operator" onclick="deleteLast()">DEL</button>
+            <button class="btn operator" onclick="appendOperator('%')">%</button>
+            <button class="btn operator" onclick="appendOperator('÷')">÷</button>
+            
+            <button class="btn number" onclick="appendNumber('7')">7</button>
+            <button class="btn number" onclick="appendNumber('8')">8</button>
+            <button class="btn number" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="appendOperator('×')">×</button>
+            
+            <button class="btn number" onclick="appendNumber('4')">4</button>
+            <button class="btn number" onclick="appendNumber('5')">5</button>
+            <button class="btn number" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="appendOperator('-')">-</button>
+            
+            <button class="btn number" onclick="appendNumber('1')">1</button>
+            <button class="btn number" onclick="appendNumber('2')">2</button>
+            <button class="btn number" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" onclick="appendOperator('+')">+</button>
+            
+            <button class="btn number zero" onclick="appendNumber('0')">0</button>
+            <button class="btn number" onclick="appendDecimal()">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
